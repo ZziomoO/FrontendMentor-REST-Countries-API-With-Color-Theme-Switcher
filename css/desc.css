@@ -114,4 +114,7 @@ h3{
     #back{
         width: 100%;
     }
+    #error{
+        width: 90%;
+    }
 }
