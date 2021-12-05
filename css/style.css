@@ -122,5 +122,11 @@ li{
     #search{
         margin-bottom: 10px;
     }
+        .country_object_img, .country_object_desc, .country_object{
+        width: 100%;
+    }
+    .country_object_img{
+        height: 60vw;
+    }
 }
 
