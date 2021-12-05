@@ -1,0 +1,126 @@
+#search_container{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+}
+#thumb_container{
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 225px);
+    gap: 33px;
+}
+.country_object{
+    width: 225px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+.country_object_img{
+    width: 100%;
+    width: 225px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.country_object_desc{
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px 20px 30px 20px;
+    height: 140px;
+}
+h3{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+#search{
+    appearance: none;
+    width: 320px;
+    height: 45px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    padding-left: 50px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+#region{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    width: 160px;
+    height: 45px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 14px;
+}
+h5{
+    font-weight: 600;
+}
+ul{
+   list-style: none;
+   position: absolute;
+   width: 160px;
+   top: 50px;
+   box-sizing: border-box;
+   padding: 15px;
+   border-radius: 6px;
+   right: 0;
+   font-weight: 600;
+   display: none;
+}
+li{
+    margin-top: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}
+#rollIcon{
+    height: 16px;
+}
+#checkbox:checked ~ ul{
+    display: block;
+}
+#checkbox{
+    display: none;
+}
+@media only screen and (max-width: 1000px){
+    #thumb_container, #search_container, header{
+        width: 745px;
+    }
+    #thumb_container{
+        grid-template-columns: repeat(3, 225px);
+    }
+}
+@media only screen and (max-width: 745px){
+    #thumb_container, #search_container, header{
+        width: 485px;
+    }
+    #thumb_container{
+        grid-template-columns: repeat(2, 225px);
+    }
+}
+@media only screen and (max-width: 485px){
+    #thumb_container, #search_container, header{
+        width: 90%;
+    }
+    #thumb_container, #search_container, main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #search, #region, main, ul, label{
+        width: 100%;
+    }
+    #search{
+        margin-bottom: 10px;
+    }
+}
+

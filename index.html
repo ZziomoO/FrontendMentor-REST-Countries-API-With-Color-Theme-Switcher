@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | REST Countries API</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js\script.js"></script>
+    <script src="js\common.js"></script>
+
+    <link rel="stylesheet" href="css\common.css">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\light.css" id="mode">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div id="header_container">
+            <header>
+                <a href="index.html"><h1>Where in the world?</h1></a>
+                <h2 onclick="changeStyle()">Dark Mode</h2>
+            </header>
+        </div>
+        <main>
+            <div id="search_container">
+                <input type="text" id="search" oninput="changeSearch(value)" placeholder="Search for a country" autocomplete="off">
+                <label for="checkbox">
+                    <div id="region">
+                        <input type="checkbox" id="checkbox">
+                        <h5>Filter by Region</h5><img src="css\svg\arrow.svg" id="rollIcon">
+                        <ul>
+                            <li onclick='changeRegion("africa")'>Africa</li>
+                            <li onclick='changeRegion("america")'>America</li>
+                            <li onclick='changeRegion("asia")'>Asia</li>
+                            <li onclick='changeRegion("europe")'>Europe</li>
+                            <li onclick='changeRegion("oceania")'>Oceania</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+            <div id="thumb_container"></div>
+        </main>
+        <script>
+            setColor();
+            getCountries();
+        </script>
+    </section>
+</body>
+</html>
